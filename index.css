@@ -1,0 +1,216 @@
+:root {
+    --maincolor: #e2e607;
+    --maincolor-alt: #b3b60c;
+    --blacks: #000000;
+    --otherColors: #19191a;
+    --gradientBackground: linear-gradient(250deg, #e2e607, #fff);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--blacks);
+}
+/* Header Section */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: var(--otherColors);
+    box-shadow: 0px 8px 10px var(--otherColors);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.closebtn{
+    display: none;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--maincolor);
+    text-shadow: 0px 7px 20px var(--maincolor);    
+}
+
+a{
+    text-decoration: none;
+    color: var(--maincolor);
+    text-transform: uppercase;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+}
+a:hover{
+    color: var(--maincolor-alt);
+}
+
+.home, .about, .service {
+    border-right: 1px solid white;
+    padding-right: 20px;
+}
+
+/* Hero Section */
+#home{
+    max-width: 100%;
+    max-height: 100vh;
+    background-color: var(--blacks);
+    display: inline-block;
+    padding: 8%;
+}
+
+.hero{
+    float: left;
+    height: 65%;
+    width: 50%;   
+    margin-left: 15px;
+}
+
+p{
+    color: aliceblue;
+    margin: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.des {
+    display: relative;
+    align-items: center;
+    display: inline-block;
+    margin-right: 10px;
+    animation: forward .3s forwards .2s;
+}
+
+
+
+#btn {
+    position: relative;
+    left: 25%;
+    bottom: 15%;
+    text-decoration: none;
+    color: var(--blacks);
+    background-color: var(--maincolor);    
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: capitalize;
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#btn:hover{
+    box-shadow: 0px 2px 10px var(--maincolor);
+}
+img {
+    float: right;
+    border: 3px solid var(--maincolor);
+    padding: 10px;
+    height: 250px;
+    width: 200px;
+    margin-right: 80px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 600px){
+    header{
+        padding: 10px 10px;
+        background:var(--blacks);
+        box-shadow: none;
+    }
+    .navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        text-align:center;
+      }
+
+      .navbar a {
+        padding: 8px 15px 8px 10px;
+        margin-top: 50px;
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--maincolor);
+        display: block;
+        transition: 0.3s;
+        border-right: none;
+      }
+
+      .navbar a:hover {
+        color: var(--maincolor-alt);
+      }
+
+      .navbar .closebtn {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        font-size: 26px;
+        margin-left: 50px;
+      }
+
+      .openbtn{
+        font-size: 20px;
+        color: var(--maincolor);
+      }      
+
+    h1{
+        font-size: 35px;
+    }
+
+    #home{
+        padding: 2px;
+    }
+
+    .hero{
+        position: absolute;
+        top: 300px;
+        left: 50px;
+        float: left;
+        height: 45%;
+        width: 80%;   
+        margin-left: 0px;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, .29);
+        border-radius: .5rem;
+        backdrop-filter: blur(2.7px);
+        -webkit-backdrop-filter: blur(2.7px);
+        border: 1px solid rgba(255, 255, 255, .31);
+    }
+
+    .des {
+        margin-right: 1px;
+    }
+
+    p{
+        margin: 10px;
+        font-size: .9em;
+        color: #fff;
+    }
+    
+    #btn {
+        position: absolute;
+        left: 20px;
+        bottom: 35px;
+        padding: 15px;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    img {
+        position: absolute;
+        padding: 8px;
+        height: 350px;
+        width: 200px;
+        left: 35px;
+        top: 100px;
+        z-index: -1;
+    }
+}
+
+
